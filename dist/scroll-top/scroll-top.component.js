@@ -6,9 +6,8 @@
  * --------------------------------------------------------------------------
  */
 import { Component, Input, HostListener } from '@angular/core';
-var ScrollTopComponent = (function () {
+var ScrollTopComponent = /** @class */ (function () {
     function ScrollTopComponent() {
-        this.showMe = false;
     }
     ScrollTopComponent.prototype.onWindowScroll = function () {
         if (document.documentElement.scrollTop > window.innerHeight) {
@@ -17,20 +16,6 @@ var ScrollTopComponent = (function () {
         else {
             this.showMe = false;
         }
-    };
-    ScrollTopComponent.decorators = [
-        { type: Component, args: [{
-                    selector: 'scroll-top',
-                    styles: ['a { display: inline;}'],
-                    // boosted css fix
-                    template: "\n    <a href=\"javascript:void(0)\" class=\"o-scroll-up\" title=\"{{label}}\"\n    onclick=\"window.scrollTo(0, 0);\" *ngIf=\"showMe\">\n      <span class=\"o-scroll-up-text hidden-sm-down\">{{label}}</span>\n      <span class=\"o-scroll-up-icon\" aria-hidden=\"true\"></span>\n    </a>\n  "
-                },] },
-    ];
-    /** @nocollapse */
-    ScrollTopComponent.ctorParameters = function () { return []; };
-    ScrollTopComponent.propDecorators = {
-        "label": [{ type: Input },],
-        "onWindowScroll": [{ type: HostListener, args: ['window:scroll', [],] },],
     };
     return ScrollTopComponent;
 }());

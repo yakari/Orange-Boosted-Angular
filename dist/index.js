@@ -31,18 +31,9 @@ var NG_BOOSTED_DECLARATIONS = [
     OCarouselComponent,
     ODropdownComponent
 ];
-var NgBoostedModule = (function () {
+var NgBoostedModule = /** @class */ (function () {
     function NgBoostedModule() {
     }
-    NgBoostedModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [CommonModule, RouterModule, NgbModule],
-                    declarations: NG_BOOSTED_DECLARATIONS,
-                    exports: NG_BOOSTED_DECLARATIONS
-                },] },
-    ];
-    /** @nocollapse */
-    NgBoostedModule.ctorParameters = function () { return []; };
     return NgBoostedModule;
 }());
 export { NgBoostedModule };
